@@ -110,7 +110,18 @@ class FindMaximumTest {
         boolean result=FindMaximum.Maximum("banana","apple","peaches").equals("peaches");
         Assert.assertTrue(result);
     }
-   
+    @Test
+    void maximum_in_GenericsClass_with_String() {
+        Optional<String> s = Optional.ofNullable(FindMaximum.max("banana", "apple", "peaches"));
+        FindMaximum.printMax(s);
+        Assert.assertEquals(Optional.ofNullable("peaches"),s);
+    }
+    @Test
+    void maximum_in_GenericsClass_with_Integer() {
+        Optional<Integer> s = Optional.ofNullable(FindMaximum.max(88,44,99,33,22));
+        FindMaximum.printMax(s);
+        Assert.assertEquals(Optional.ofNullable(99),s);
+    }
 
 
 }
