@@ -43,4 +43,25 @@ class FindMaximumTest {
         int result = FindMaximum.MaximumNumber(7.2f, 9.3f, 17.5f).compareTo(9.3f);
         Assert.assertEquals(1,result);
     }
+    @Test
+    void maximum_NumberString_At_Position_1() {
+        int result = FindMaximum.MaximumNumber("apple", "banana", "peaches").compareTo("peaches");
+        Assert.assertEquals(0,result);
+    }
+    @Test
+    void maximum_NumberString_At_Position_2() {
+        int result = FindMaximum.MaximumNumber("apple", "peaches", "banana").compareTo("peaches");
+        Assert.assertEquals(0,result);
+    }
+    @Test
+    void maximum_NumberString_At_Position_3() {
+        int result = FindMaximum.MaximumNumber("apple", "banana", "peaches").compareTo("peaches");
+        Assert.assertEquals(0,result);
+    }
+    @Test
+    void maximum_NumberString_At_Position_3_Is_False() {
+        boolean result = FindMaximum.MaximumNumber("apple", "banana", "peaches").equals("apple");
+        Assert.assertFalse(result);
+        
+    }
 }
