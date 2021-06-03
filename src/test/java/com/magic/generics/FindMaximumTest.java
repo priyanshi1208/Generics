@@ -2,6 +2,8 @@ package com.magic.generics;
 import  org.junit.*;
 import org.junit.jupiter.api.Test;
 
+import java.util.Optional;
+
 class FindMaximumTest {
     @Test
     void maximum_Number_At_Position_1() {
@@ -108,4 +110,7 @@ class FindMaximumTest {
         boolean result=FindMaximum.Maximum("banana","apple","peaches").equals("peaches");
         Assert.assertTrue(result);
     }
+   
+
+
 }
