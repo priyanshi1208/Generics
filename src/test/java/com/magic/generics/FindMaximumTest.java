@@ -62,6 +62,50 @@ class FindMaximumTest {
     void maximum_NumberString_At_Position_3_Is_False() {
         boolean result = FindMaximum.MaximumNumber("apple", "banana", "peaches").equals("apple");
         Assert.assertFalse(result);
-        
+    }
+    @Test
+    void maximum_in_Generics_in_Integers_at_1(){
+        boolean result=FindMaximum.Maximum(9,5,7).equals(9);
+        Assert.assertTrue(result);
+    }
+    @Test
+    void maximum_in_Generics_in_Integers_at_2(){
+        boolean result=FindMaximum.Maximum(9,15,7).equals(15);
+        Assert.assertTrue(result);
+    }
+    @Test
+    void maximum_in_Generics_in_Integers_at_3(){
+        boolean result=FindMaximum.Maximum(9,5,71).equals(71);
+        Assert.assertTrue(result);
+    }
+    @Test
+    void maximum_in_Generics_in_Float_at_1(){
+        boolean result=FindMaximum.Maximum(91f,5f,71f).equals(91f);
+        Assert.assertTrue(result);
+    }
+    @Test
+    void maximum_in_Generics_in_Float_at_2(){
+        boolean result=FindMaximum.Maximum(91f,215f,71f).equals(215f);
+        Assert.assertTrue(result);
+    }
+    @Test
+    void maximum_in_Generics_in_Float_at_3(){
+        boolean result=FindMaximum.Maximum(91f,5f,710f).equals(710f);
+        Assert.assertTrue(result);
+    }
+    @Test
+    void maximum_in_Generics_in_String_at_1(){
+        boolean result=FindMaximum.Maximum("peaches","apple","banana").equals("peaches");
+        Assert.assertTrue(result);
+    }
+    @Test
+    void maximum_in_Generics_in_String_at_2(){
+        boolean result=FindMaximum.Maximum("apple","peaches","banana").equals("peaches");
+        Assert.assertTrue(result);
+    }
+    @Test
+    void maximum_in_Generics_in_String_at_3(){
+        boolean result=FindMaximum.Maximum("banana","apple","peaches").equals("peaches");
+        Assert.assertTrue(result);
     }
 }
